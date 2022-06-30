@@ -33,3 +33,7 @@ races_map <- races |>
 write_rds(races_map, "races_map.rds")
 ```
 
+```{r}
+read_rds("races_map.rds")
+```
+
