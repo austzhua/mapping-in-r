@@ -1,7 +1,7 @@
 name: mapping-in-r
 output_dir: "."
 navbar:
-  title: "Maping Demonstration"
+  title: "Mapping Demonstration"
   left:
     - text: "Home"
       href: index.html
