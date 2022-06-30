@@ -1,0 +1,15 @@
+---
+title: "Maps in R"
+output: html_document
+date: '2022-06-30'
+author: "Austin Zhuang"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(tidycensus)
+library(ggthemes)
+library(tigris)
+```
+This website maps US Census data
