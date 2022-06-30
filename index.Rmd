@@ -1,5 +1,5 @@
 ---
-title: "Maps in R"
+title: "Home"
 output: html_document
 date: '2022-06-30'
 author: "Austin Zhuang"

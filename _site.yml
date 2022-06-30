@@ -1,0 +1,26 @@
+name: mapping-in-r
+output_dir: "."
+navbar:
+  title: "Maping Demonstration"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "County Map"
+      href: county.html
+    - text: "Food Deserts"
+      href: deserts.html
+    - text: "Rural Map"
+      href: rural.html
+    - text: "Senior Map"
+      href: senior.html
+    - text: "Percentage of Two Races"
+      href: tworaces.html
+    - text: "Sources"
+      menu:
+        - text: "US Decennial Census"
+          href: source1.html
+        - text: "US American Community Survey"
+          href: source2.html
+output:
+  html_document:
+    theme: cosmo

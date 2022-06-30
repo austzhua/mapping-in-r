@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+<meta name="date" content="2022-06-30" />
+
+<title>Senior Map</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Maping Demonstration</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="county.html">County Map</a>
+</li>
+<li>
+  <a href="deserts.html">Food Deserts</a>
+</li>
+<li>
+  <a href="rural.html">Rural Map</a>
+</li>
+<li>
+  <a href="senior.html">Senior Map</a>
+</li>
+<li>
+  <a href="tworaces.html">Percentage of Two Races</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Sources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="source1.html">US Decennial Census</a>
+    </li>
+    <li>
+      <a href="source2.html">US American Community Survey</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Senior Map</h1>
+<h4 class="date">2022-06-30</h4>
+
+</div>
+
+
+<pre class="r"><code>glimpse(pums_variables)</code></pre>
+<pre><code>## Rows: 37,021
+## Columns: 12
+## $ survey     &lt;chr&gt; &quot;acs1&quot;, &quot;acs1&quot;, &quot;acs1&quot;, &quot;acs1&quot;, &quot;acs1&quot;, &quot;acs1&quot;, &quot;acs1&quot;, &quot;ac…
+## $ year       &lt;chr&gt; &quot;2017&quot;, &quot;2017&quot;, &quot;2017&quot;, &quot;2017&quot;, &quot;2017&quot;, &quot;2017&quot;, &quot;2017&quot;, &quot;20…
+## $ var_code   &lt;chr&gt; &quot;SERIALNO&quot;, &quot;DIVISION&quot;, &quot;DIVISION&quot;, &quot;DIVISION&quot;, &quot;DIVISION&quot;,…
+## $ var_label  &lt;chr&gt; &quot;Housing unit/GQ person serial number&quot;, &quot;Division code base…
+## $ data_type  &lt;chr&gt; &quot;chr&quot;, &quot;chr&quot;, &quot;chr&quot;, &quot;chr&quot;, &quot;chr&quot;, &quot;chr&quot;, &quot;chr&quot;, &quot;chr&quot;, &quot;ch…
+## $ level      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+## $ val_min    &lt;chr&gt; &quot;2017000000001&quot;, &quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8…
+## $ val_max    &lt;chr&gt; &quot;2017999999999&quot;, &quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8…
+## $ val_label  &lt;chr&gt; &quot;Unique identifier&quot;, &quot;Puerto Rico&quot;, &quot;New England (Northeast…
+## $ recode     &lt;lgl&gt; FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…
+## $ val_length &lt;int&gt; 13, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 2, 2, 2…
+## $ val_na     &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</code></pre>
+<pre class="r"><code>nw_states &lt;- c(&quot;OR&quot;, &quot;WA&quot;, &quot;ID&quot;)
+nw_pumas &lt;- map(nw_states, 
+                tigris::pumas, 
+                class=&quot;sf&quot;, 
+                cb=TRUE, 
+                year = 2018) |&gt;
+  reduce(rbind)</code></pre>
+<pre><code>## 
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |=                                                                     |   1%
+  |                                                                            
+  |============                                                          |  17%
+  |                                                                            
+  |=======================                                               |  33%
+  |                                                                            
+  |===============================                                       |  44%
+  |                                                                            
+  |==================================                                    |  49%
+  |                                                                            
+  |==============================================                        |  65%
+  |                                                                            
+  |=========================================================             |  81%
+  |                                                                            
+  |======================================================================| 100%
+## 
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |                                                                      |   1%
+  |                                                                            
+  |=======                                                               |  10%
+  |                                                                            
+  |=============                                                         |  19%
+  |                                                                            
+  |====================                                                  |  29%
+  |                                                                            
+  |===========================                                           |  38%
+  |                                                                            
+  |=================================                                     |  47%
+  |                                                                            
+  |========================================                              |  57%
+  |                                                                            
+  |==============================================                        |  66%
+  |                                                                            
+  |=====================================================                 |  75%
+  |                                                                            
+  |===========================================================           |  85%
+  |                                                                            
+  |==============================================================        |  89%
+  |                                                                            
+  |======================================================================| 100%
+## 
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |=                                                                     |   1%
+  |                                                                            
+  |==============                                                        |  20%
+  |                                                                            
+  |===========================                                           |  39%
+  |                                                                            
+  |========================================                              |  58%
+  |                                                                            
+  |=================================================                     |  70%
+  |                                                                            
+  |======================================================                |  77%
+  |                                                                            
+  |======================================================================| 100%</code></pre>
+<pre class="r"><code>nw_pums &lt;- get_pums(variables = c(&quot;AGEP&quot;, &quot;PUMA&quot;), 
+         state = nw_states, 
+         recode = TRUE, 
+         survey = &quot;acs1&quot;, 
+         year = 2018)</code></pre>
+<pre><code>## Getting data from the 2018 1-year ACS Public Use Microdata Sample</code></pre>
+<pre><code>## 
+Downloading: 16 kB     
+Downloading: 16 kB     
+Downloading: 27 kB     
+Downloading: 27 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 45 kB     
+Downloading: 45 kB     
+Downloading: 54 kB     
+Downloading: 54 kB     
+Downloading: 63 kB     
+Downloading: 63 kB     
+Downloading: 72 kB     
+Downloading: 72 kB     
+Downloading: 81 kB     
+Downloading: 81 kB     
+Downloading: 90 kB     
+Downloading: 90 kB     
+Downloading: 99 kB     
+Downloading: 99 kB     
+Downloading: 110 kB     
+Downloading: 110 kB     
+Downloading: 120 kB     
+Downloading: 120 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 150 kB     
+Downloading: 150 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 180 kB     
+Downloading: 180 kB     
+Downloading: 200 kB     
+Downloading: 200 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 330 kB     
+Downloading: 330 kB     
+Downloading: 330 kB     
+Downloading: 330 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 440 kB     
+Downloading: 440 kB     
+Downloading: 440 kB     
+Downloading: 440 kB     
+Downloading: 450 kB     
+Downloading: 450 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 520 kB     
+Downloading: 520 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 580 kB     
+Downloading: 580 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 620 kB     
+Downloading: 620 kB     
+Downloading: 660 kB     
+Downloading: 660 kB     
+Downloading: 690 kB     
+Downloading: 690 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 820 kB     
+Downloading: 820 kB     
+Downloading: 820 kB     
+Downloading: 820 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 880 kB     
+Downloading: 880 kB     
+Downloading: 880 kB     
+Downloading: 880 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 960 kB     
+Downloading: 960 kB     
+Downloading: 960 kB     
+Downloading: 960 kB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.5 MB     
+Downloading: 1.6 MB     
+Downloading: 1.6 MB     
+Downloading: 1.6 MB     
+Downloading: 1.6 MB     
+Downloading: 1.6 MB     
+Downloading: 1.6 MB     
+Downloading: 1.6 MB     
+Downloading: 1.6 MB     
+Downloading: 1.7 MB     
+Downloading: 1.7 MB     
+Downloading: 1.7 MB     
+Downloading: 1.7 MB     
+Downloading: 1.7 MB     
+Downloading: 1.7 MB     
+Downloading: 1.7 MB     
+Downloading: 1.7 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.8 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 1.9 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2 MB     
+Downloading: 2.1 MB     
+Downloading: 2.1 MB     
+Downloading: 2.1 MB     
+Downloading: 2.1 MB     
+Downloading: 2.1 MB     
+Downloading: 2.1 MB     
+Downloading: 2.1 MB     
+Downloading: 2.1 MB     
+Downloading: 2.2 MB     
+Downloading: 2.2 MB     
+Downloading: 2.2 MB     
+Downloading: 2.2 MB     
+Downloading: 2.2 MB     
+Downloading: 2.2 MB     
+Downloading: 2.2 MB     
+Downloading: 2.2 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.3 MB     
+Downloading: 2.4 MB     
+Downloading: 2.4 MB     
+Downloading: 2.4 MB     
+Downloading: 2.4 MB     
+Downloading: 2.4 MB     
+Downloading: 2.4 MB     
+Downloading: 2.4 MB     
+Downloading: 2.4 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.5 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.6 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.7 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.8 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 2.9 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.1 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.2 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.3 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.4 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.5 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.6 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.7 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.8 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 3.9 MB     
+Downloading: 4 MB     
+Downloading: 4 MB     
+Downloading: 4 MB     
+Downloading: 4 MB     
+Downloading: 4 MB     
+Downloading: 4 MB     
+Downloading: 4 MB     
+Downloading: 4 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.1 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.2 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.3 MB     
+Downloading: 4.4 MB     
+Downloading: 4.4 MB     
+Downloading: 4.4 MB     
+Downloading: 4.4 MB     
+Downloading: 4.4 MB     
+Downloading: 4.4 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.5 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.6 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.7 MB     
+Downloading: 4.8 MB     
+Downloading: 4.8 MB     
+Downloading: 4.8 MB     
+Downloading: 4.8 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 4.9 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.1 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.2 MB     
+Downloading: 5.3 MB     
+Downloading: 5.3 MB     
+Downloading: 5.3 MB     
+Downloading: 5.3 MB     
+Downloading: 5.3 MB     
+Downloading: 5.3 MB     
+Downloading: 5.3 MB     
+Downloading: 5.3 MB     
+Downloading: 5.4 MB     
+Downloading: 5.4 MB     
+Downloading: 5.4 MB     
+Downloading: 5.4 MB     
+Downloading: 5.4 MB     
+Downloading: 5.4 MB     
+Downloading: 5.4 MB     
+Downloading: 5.4 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.5 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.6 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.7 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.8 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 5.9 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.1 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.2 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.3 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.4 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.5 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.6 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.7 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.8 MB     
+Downloading: 6.9 MB     
+Downloading: 6.9 MB     
+Downloading: 6.9 MB     
+Downloading: 6.9 MB</code></pre>
+<pre class="r"><code>nw_Senior &lt;- nw_pums |&gt; 
+  group_by(ST, PUMA) |&gt; 
+  summarize(total_pop = sum(PWGTP), 
+            pct_Senior = sum(PWGTP[AGEP &gt; 64])/total_pop, 
+            .groups = &quot;drop&quot;)
+
+nw_final &lt;- left_join(nw_pumas, nw_Senior, by = c(&quot;STATEFP10&quot; = &quot;ST&quot;, 
+                                                  &quot;PUMACE10&quot; = &quot;PUMA&quot;))
+
+nw_final |&gt; 
+  ggplot(aes(fill = pct_Senior)) + 
+    geom_sf() + 
+    scale_fill_viridis_b(name = NULL,
+        option = &quot;magma&quot;,
+        labels = scales::label_percent(1)) + 
+  labs(title = &quot;Percentage of population that are Seniors&quot;,
+         caption = &quot;Source: American Community Survey 2014-2018&quot;) +
+  theme_void()</code></pre>
+<p><img src="senior_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
