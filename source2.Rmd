@@ -1,0 +1,14 @@
+---
+title: "US American Community Survey"
+output: html_document
+date: '2022-06-30'
+bibliography: bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Source 2 was the US American Community Survey. This allowed us to generate maps about the racial breakdown of the US. [@acs2018]"
+
+This was accessed by using the `tidycensus` package. [@tidycensus]
